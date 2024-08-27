@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Jersey 10';
+    src: url('./Jersey10-Regular.ttf') format('truetype');
+}
+
+.npc-container {
+    position: absolute;
+    font-family: 'Jersey 10', monospace;
+    cursor: move;
+}
+
+#npc1-container {
+    top: 750px;
+    left: 100px;
+}
+
+#npc2-container {
+    top: 800px;
+    left: 1200px;
+}
+
+#npc3-container {
+    top: 220px;
+    left: 780px;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.npc-area {
+    background-image: url('background.png');
+    background-size: 1600px 1200px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.npc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.npc-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+@keyframes slideRightToLeft {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+.npc-animate {
+    animation: slideRightToLeft 2s infinite ease-in-out;
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.response-box {
+    width: 300px;
+    height: 150px;
+    overflow: auto;
+    border: 0px;
+    padding: 5px;
+    margin-top: 5px;
+    font-family: 'Jersey 10', monospace;
+    font-size: 24px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.typewriter {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typewriter 4s steps(40) 1s normal both, blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes blinkTextCursor {
+    from { border-right-color: rgba(0,0,0,0.75); }
+    to { border-right-color: transparent; }
+}
+
+.response-box.typing {
+    border-right: 2px solid rgba(0,0,0,0.75);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.blinking {
+    animation: blink 1s linear infinite;
+}
+
+#dialog-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 1600px;
+    padding: 10px;
+    padding-bottom: 40px;
+    font-family: 'Jersey 10', monospace;
+    font-size: 32px;
+    border-top: 0px solid #ccc;
+    box-shadow: 0 -1px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    z-index: 1000;
+    background-image: url('scroll.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    color: white;
+    font-family: 'Jersey 10', sans-serif;
+    font-size: 4rem;
+}
+
+#data-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Jersey 10', monospace;
+    font-size: 66px;
+    font-weight: bold;
+    color: black; /* Ensures the text is visible */
+    z-index: 20;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echoes of Destiny</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="data-container" class="data-container"></div>
+  <div id="game" class="npc-area">
+    <h1 class="title"> Echoes of Destiny: Whispering Realms </h1>
+    <div class="npc-container" id="npc1-container">
+      <div class="response-box hidden" id="npc1-response">
+        <div class="typewriter">
+            <!-- Text will be injected and animated here -->
+        </div>
+      </div>
+      <div class="npc" id="npc1" onclick="showDialog(this.id)">
+        <img src="npc1.png" class="npc-image">
+      </div>
+    </div>
+    <div class="npc-container" id="npc2-container">
+      <div class="response-box hidden" id="npc2-response">
+        <div class="typewriter">
+            <!-- Text will be injected and animated here -->
+        </div>
+      </div>
+      <div class="npc" id="npc2" onclick="showDialog(this.id)">
+        <img src="npc2.png" class="npc-image">
+      </div>
+    </div>
+    <div class="npc-container" id="npc3-container">
+      <div class="npc npc-animate" id="npc3" onclick="showDialog(this.id)">
+        <img src="npc3.png" class="npc-image">
+      </div>
+      <div class="response-box hidden" id="npc3-response">
+        <div class="typewriter">
+          <!-- Text will be injected and animated here -->
+      </div>
+      </div>
+    </div>
+    <div id="dialog-box" class="hidden">
+      <br/>
+      <label for="message">Talk to <span id="npc-name">NPC</span>:</label>
+      <br/>
+      <input type="text" id="message" placeholder="Type your message here...">
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
