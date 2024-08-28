@@ -119,3 +119,14 @@ services:
       - 8080:8080
     depends_on:
       - redpanda-0
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: secret
+      POSTGRES_USER: root
+      POSTGRES_DB: root
+    volumes:
+    - ./files/postgres:/docker-entrypoint-initdb.d
