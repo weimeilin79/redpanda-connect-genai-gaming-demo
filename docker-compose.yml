@@ -98,7 +98,7 @@ services:
       - redpanda-0
   console:
     container_name: redpanda-console
-    image: docker.redpanda.com/redpandadata/console:v2.7.1
+    image: docker.redpanda.com/redpandadata/console:v2.7.0
     networks:
       - redpanda_network
     entrypoint: /bin/sh
