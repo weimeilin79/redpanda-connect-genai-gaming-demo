@@ -9,19 +9,19 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 const brokers = process.env.REDPANDA_BROKERS ? process.env.REDPANDA_BROKERS.split(',') : ['localhost:19092'];
-const saslMechanism = process.env.REDPANDA_SASL_MECHANISM || 'SCRAM-SHA-256';
-const username = process.env.REDPANDA_USERNAME || 'workshop';
-const password = process.env.REDPANDA_PASSWORD || '1234qwer';
+//const saslMechanism = process.env.REDPANDA_SASL_MECHANISM || 'SCRAM-SHA-256';
+//const username = process.env.REDPANDA_USERNAME || 'workshop';
+//const password = process.env.REDPANDA_PASSWORD || '1234qwer';
 
 const kafka = new Kafka({
     clientId: 'rpg-frontend',
     brokers: brokers,
-    ssl: {},
-    sasl: {
-        mechanism: saslMechanism,
-        username: username,
-        password: password
-    }
+//    ssl: {},
+//    sasl: {
+//        mechanism: saslMechanism,
+//        username: username,
+//        password: password
+//    }
 });
 const producer = kafka.producer();
 const consumer = kafka.consumer({ groupId: 'rpg-group' });
