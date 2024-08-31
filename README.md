@@ -2,6 +2,20 @@
 
 This guide walks you through setting up a Redpanda Cluster and integrating it with local Ollama, OpenAI services, and a PostgreSQL vector database for a dynamic and immersive role-playing game (RPG) demo. The demo features NPC interactions powered by LLMs and event-driven architecture.
 
+## Prerequisites
+
+Before starting, ensure you have the following installed on your system:
+
+- **Node.js**: Download and install Node.js
+- **Redpanda Connect**: Download and install Redpanda Connect using the following command:
+```
+wget https://github.com/redpanda-data/connect/releases/download/v4.33.0/redpanda-connect_4.33.0_linux_amd64.tar.gz
+tar -xvzf redpanda-connect_4.33.0_linux_amd64.tar.gz
+sudo mv redpanda-connect /usr/local/bin/
+```
+- **rpk**: Install rpk to manage your Redpanda cluster. Follow the instructions [here](https://docs.redpanda.com/current/get-started/rpk-install/).
+- **Ollama** : Install Ollama to run large language models locally. Follow the installation instructions on [Ollama's official website](https://ollama.com/).
+
 ## Setup Redpanda Cluster
 
 Clone the Repository and Start the Redpanda Cluster:
