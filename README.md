@@ -3,7 +3,7 @@
 This guide walks you through setting up a Redpanda Cluster and integrating it with local Ollama, OpenAI services, and a PostgreSQL vector database for a dynamic and immersive role-playing game (RPG) demo. The demo features NPC interactions powered by LLMs and event-driven architecture.
 
 
-[<img src="./image/youtube-view.png" width="50%">](https://youtu.be/FTGFJMQya50 "Building a Dynamic RPG with Redpanda Connect: Multiple AI agent EDA system")
+[<img src="./image/youtube-view.png" width="80%">](https://youtu.be/FTGFJMQya50 "Building a Dynamic RPG with Redpanda Connect: Multiple AI agent EDA system")
 
 ## Prerequisites
 
